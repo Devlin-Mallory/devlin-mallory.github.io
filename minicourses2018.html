@@ -1,0 +1,395 @@
+<head>
+<title>Summer minicourses 2018</title>
+    <style type="text/css">
+      h2 {
+        margin-bottom: 0.5em;
+      }
+      p, ol, ul {
+        margin-top: 0;
+        margin-bottom: 0.5em;
+      }
+      tbody > tr > th {
+        text-align: left;
+      }
+      #abstractTable td:not(.speaker):not(.theAbstract) {
+        white-space: nowrap;
+      }
+      tr[id^="abstract"] {
+        display: none;
+      }
+      .lecturelist {
+        list-style-type: none;
+        counter-reset: elementcounter;
+        padding-left: 1em;
+      }
+      .lecturelist > li ul {
+        list-style: outside;
+        padding-left: 1em;
+        margin-bottom: 0em;
+      }
+      .lecturelist > li:before {
+        content: "Lecture " counter(elementcounter) ": ";
+        counter-increment: elementcounter;
+      }
+      .lecturelist > li > ul {
+        list-style-type: none;
+        padding-left: 2em;
+        text-indent: -0.75em;
+      }
+      .lecturelist > li > ul > li:before {
+        content: "– ";
+      }
+      .lecturelist > li > ul > li > ul {
+        list-style-type: disc;
+        text-indent: 0;
+      }
+      .lecturelist > li > ul > li > ul > li > ul {
+        list-style-type: circle;
+        text-indent: 0;
+      }
+      #abstractTable {
+        text-align: left;
+        width: 100%;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+      #abstractTable th,
+      #abstractTable > tbody > tr > td:not(.theAbstract):not(:last-child) {
+        padding: 4pt 2pt 4pt 2pt;
+      }
+      #abstractTable > tbody > tr > th {
+        padding-left: 4pt;
+      }
+      #headerRow > th {
+        border: solid black;
+        border-width: 1pt 1pt 1pt 1pt;
+        text-align: center;
+        padding-left: 4pt;
+        padding-right: 4pt;
+      }
+      #abstractTable > tbody:nth-child(even) {
+        background-color: #e2e2e2;
+      }
+      #abstractTable > tbody:nth-child(odd) {
+        background-color: #ffffff;
+      }
+      #abstractTable > tbody > tr > th:first-child {
+        border: solid black;
+        border-width: 0 0 0 1pt;
+      }
+      #abstractTable > tbody > tr > td:last-child:not(.theAbstract) {
+        border: solid black;
+        border-width: 0 1pt 0 0;
+        vertical-align: middle;
+        padding: 3pt 0 0 0;
+      }
+      #abstractTable > tbody:last-child > tr:last-child > th,
+      #abstractTable > tbody:last-child > tr:last-child > td:not(.theAbstract) {
+        border: solid black;
+        border-width: 0 0 1pt 0;
+      }
+      #abstractTable > tbody:last-child > tr:last-child > th:first-child {
+        border: solid black;
+        border-width: 0 0 1pt 1pt;
+      }
+      #abstractTable > tbody:last-child > tr:last-child > td:last-child:not(.theAbstract) {
+        border: solid black;
+        border-width: 0 1pt 1pt 0;
+      }
+      .theAbstract {
+        padding: 0 4pt 0 4pt;
+        border: solid black;
+        border-width: 0 1pt 0 1pt;
+      }
+      #abstractTable > tbody:last-child > tr:last-child > td[class="theAbstract"] {
+        border: solid black;
+        border-width: 0 1pt 1pt 1pt;
+      }
+      .corresTable {
+        width: 100%;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+      }
+      .corresTable tr td:first-child {
+        width: 49%;
+        text-align: right;
+      }
+      .corresTable tr td:nth-child(even) {
+        width: 2%;
+        white-space: nowrap;
+        text-align: center;
+      }
+      .corresTable tr td:last-child {
+        width: 49%;
+        text-align: left;
+      }
+      .lectureTable {
+        padding-left: 1em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+      }
+      .lectureTable tr td {
+        vertical-align: top;
+      }
+      #lastHeadRow th, #lastHeadRow td {
+        border-bottom: 1pt solid black;
+      }
+      #abstractTable > tbody:last-child > #lastHeadRow > th:first-child {
+        border: solid black;
+        border-width: 0 0 1pt 1pt;
+      }
+      #abstractTable > tbody:last-child > #lastHeadRow > td:last-child:not(.theAbstract) {
+        border: solid black;
+        border-width: 0 1pt 1pt 0;
+      }
+    </style>
+</head>
+
+
+
+
+
+<p><b>Summer minicourses 2018</b></p>
+<p>The summer minicourses are a chance for Michigan graduate students to teach each other interesting math in a friendly, informal setting. 
+<p>Generally, courses meet once a day, in the afternoon, for a week. All are welcome to attend, but keep in mind the target audience is graduate students in the mathematics department.</p>
+<p>The line-up this year is below, though additions and changes are likely! You can <a id="showAbstracts" href="#">show</a> or <a id="hideAbstracts" href="#">hide</a> all the abstracts for printing purposes.</p>
+<p>If you're giving one of the minicourses and you'd like to post notes, just send them to me and I'll post them!</p>
+<br>
+<table id="abstractTable">
+<thead>
+<tr id="headerRow">
+<th id="topicHeader">Topic</th>
+<th>Speaker</th>
+<th colspan="2">Dates</th>
+<th colspan="2">Location and Time</th>
+<th>Abstract</th>
+<th id="notesHeader">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Hilbert schemes of points</th>
+<td class="speaker"><a href="http://www-personal.umich.edu/~malloryd">Devlin
+ Mallory</a></td>
+<td>May 28&ndash;June 1</td>
+<td>M&ndash;F</td>
+<td>EH 3088</td>
+<td>1&ndash; 2:30</td>
+<td style="text-align: center;"><button id="toggleAbstract1">Show</button></td>
+<td style="text-align: center;"><a href="main.pdf"> <img src="Adobe_PDF_file_icon_24x24.png" alt="PDF" /> </a></td>
+<td>  </td>
+</tr>
+<tr id="abstract1" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em> We'll give an overview of the properties and applications of the Hilbert scheme of points. We'll begin by sketching the construction and properties of Hilbert schemes in general and recalling some necessary deformation theory, before restricting our attention to the case of points. In this context, we'll give examples of the known behavior and open questions, as well as proving the smoothness and irreducibility of the Hilbert scheme of points on a surface. We'll then explore some of the birational geometry of the Hilbert scheme of points on a surface. Time permitting, we may also explore connections the Heisenberg algebra. Throughout our focus will be computation and examples. The course will assume background knowledge of basic algebraic geometry (in particular, sheaf cohomology).</p>
+</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<th>Crystalline cohomology</th>
+<td class="speaker">Haoyang Guo</td>
+<td>June 11&ndash;June 15</td>
+<td>M&ndash;F</td>
+<td>EH 3088</td>
+<td>1&ndash; 2:30</td>
+<td style="text-align: center;"><button id="toggleAbstract2">Show</button></td>
+<td style="text-align: center;"><a href="haoyang.pdf"> <img src="Adobe_PDF_file_icon_24x24.png" alt="PDF" /> </a></td>
+<td>  </td>
+</tr>
+<tr id="abstract2" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em> Crystalline cohomology is a cohomology theory created by Berthelot and Grothendieck. It was designed to serve as a "good" p-adic cohomology theory for varieties in characteristic p. In this mini-course, we will give an overview about crystalline cohomology. In the first class, we give a mild introduction about the motivation and main results of the crystalline cohomology, with nothing technical. Then we start by looking at algebraic and geometric basics around crystalline theory. We will prove the comparison theorem between crystalline cohomology and de Rham cohomology, following Bhatt and de Jong. After that, we turn to the study of the de Rham-Witt complex, a powerful tool in crystalline cohomology. At last, we apply our theory to several questions about rational points in arithmetic geometry.</p>
+</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<th>Pre-workshop learning group on Higgs bundles </th>
+<td class="speaker">Bradley Zykoski</td>
+<td>June 18&ndash;June 22</td>
+<td>M&ndash;F</td>
+<td>EH 3088</td>
+<td>1&ndash; 3</td>
+<td style="text-align: center;"><button id="toggleAbstract3">Show</button></td>
+<td>  </td>
+</tr>
+<tr id="abstract3" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em> In essence, this mini-course is about describing several different ways of constructing the same deformation theory. Most straightforwardly, this is the deformation theory of representations of the fundamental group of surface into some Lie group G, modulo inner automorphisms of G. We will be interested in two constructions which are more geometric in nature: the “de Rham approach” and the “Higgs bundle approach.” The former arises from the fact that any representation of a surface group can be realized as the holonomy of a flat connection, while the latter arises from the fact that this same data is also encoded by a holomorphic vector bundle E over our surface equipped with an integrable differential End(E)-valued 1-form. The majority of this course will be devoted to explaining what in the world the previous sentence actually means. We will hopefully have time at the end to say at least a little about why it is worthwhile to consider these alternative descriptions of this deformation theory, though this question will likely be answered much more satisfactorily at the workshop at UIC for which this mini-course is meant as a preparation.</p>
+</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<th>Tropical Brill&ndash;Noether theory</th>
+<td class="speaker"><a href="http://www-personal.umich.edu/~hrichman/"> Harry Richman
+<td>July 2&ndash;July 6</td>
+<td>M&ndash;F</td>
+<td>EH 4096</td>
+<td>1&ndash;2</td>
+<td style="text-align: center;"><button id="toggleAbstract11">Show</button></td>
+<td>  </td>
+</tr>
+<tr id="abstract11" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em> Given an algrebraic curve of genus g, one may ask 
+(1) for what pairs <em>(r, d)</em> does there exist a degree-d embedding of the curve into <em>r</em>-dimensional projective space? and
+(2) when such embeddings exist, "how many" are there?
+Brill-Noether theory is the study of such questions, and a straightforward formula is known for a generic curve of a given genus. Recently it was observed that this formula can be proved by considering the analogous questions for tropical curves. In this minicourse we will discuss the basics of Brill-Noether theory and the basics of (abstract) tropical curves, and cover how they are combined in Cools-Draisma-Payne-Robeva's proof of Brill-Noether.</p>
+</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<th>Decay of correlations for the geodesic flow</th>
+<td class="speaker"><a href="http://www-personal.umich.edu/~siddiqis/"> Salman Siddiqi
+<td>July 9&ndash;July 13</td>
+<td>M&ndash;F</td>
+<td>EH 3088</td>
+<td>1&ndash;2</td>
+<td style="text-align: center;"><button id="toggleAbstract4">Show</button></td>
+<td>  </td>
+</tr>
+<tr id="abstract4" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em> On closed manifolds of negative curvature, Anosov showed in 1967 that the geodesic flow was ergodic for the Liouville measure. Building on an argument of Dolgopyat, Liverani showed in 2004 that the geodesic flow in negative curvature is in fact exponentially mixing and that the associated transfer operator acts with a spectral gap.
+
+The first talk will be accessible, and I'll try to provide some motivation for the study of mixing rates of dynamical systems without assuming any prior knowledge of dynamics or geometry. During the rest of the week, I will give an overview of Liverani's argument and go into some of the details.</p>
+</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<th>Computations in Macaulay2 (week 1)</th>
+<td class="speaker"><a href="https://sites.google.com/a/umich.edu/robert-m-walker/home">Robert Walker
+<td>July 16&ndash;July 20</td>
+<td>M&ndash;F</td>
+<td>EH 3088</td>
+<td>12&ndash;1:30</td>
+<td style="text-align: center;"><button id="toggleAbstract7">Show</button></td>
+<td>  </td>
+</tr>
+<tr id="abstract7" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em> This course will tease and showcase some of the "dope" things Macaulay2 (M2) can do -- that tally is growing! Those who don't want to fiddle with preinstalling M2 on their computer might like the option of "browsing" M2 via Mike Stillman's Habanero Virtual Machine: http://habanero.math.cornell.edu:3690/  You might pair this with perusing the book Computations in Algebraic Geometry with Macaulay2 which can be found via SpringerLink courtesy of the UM-Ann Arbor library. 
+
+Along the way, I think it best to intersperse "demo days" with student seminar level pre-talks in the style of the AGNES regional conferences in Algebraic Geometry -- in the style of Student Combinatorics in particular, there may occasionally be snacks to pass around, good fun! At the very least, we will cover packages such HyperplaneArrangements, Matroids, Polyhedra, and NormalToricVarieties, possibly postponing "higher prerequisite" packages appealing to those with proclivities more algebro-geometric or commutative algebraic until the main academic year when even more folks and M2 enthusiasts are around and seminars are "in full bloom."  All are welcome!</p>
+</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<th>Computations in Macaulay2 (week 2)</th>
+<td class="speaker"> Robert Walker
+<td>July 23&ndash;July 27</td>
+<td>M&ndash;F</td>
+<td>WH 242</td>
+<td>12&ndash;1:30</td>
+<td style="text-align: center;"><button id="toggleAbstract70">Show</button></td>
+<td>  </td>
+</tr>
+<tr id="abstract70" class="abstract">
+<td class="theAbstract" colspan="8">
+</td>
+</tr>
+</tbody>
+
+
+
+
+
+
+<tbody>
+<tr>
+<th>Rings of differential operators</th>
+<td class="speaker"><a href="http://www-personal.umich.edu/~equinlan/">Eamon Quinlan-Gallego
+<td>August 6&ndash;August 10</td>
+<td>M&ndash;F</td>
+<td>EH 3088</td>
+<td>1&ndash;2</td>
+<td style="text-align: center;"><button id="toggleAbstract8">Show</button></td>
+<td>  </td>
+</tr>
+<tr id="abstract8" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em> Given a k-algebra R one can construct the non-commutative ring D_k(R) of differential operators on R. While this construction is well-behaved whenever R is regular and k is a field of characteristic zero, the properties of rings of differential operators of singular rings remain somewhat mysterious.
+
+In this course we will explore these non-commutative rings with lots of examples, and use them as an excuse to learn about topics in both commutative in non-commutative algebra such as étale extensions and Morita theory. The goal will be to discuss a theorem of Ben-Zvi and Nevins that says that, under certain niceness hypothesis, the ring of differential operators of R and the ring of differential operators on a "resolution of singularities" of R are Morita equivalent.
+</p>
+</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<th>Functor of points geometry</th>
+<td class="speaker"><a href="https://attilio-castano.github.io/Scripts/">Attilio Castano
+<td>August 13&ndash;August 17</td>
+<td>M&ndash;F</td>
+<td>EH 3088</td>
+<td>3&ndash;5</td>
+<td style="text-align: center;"><button id="toggleAbstract9">Show</button></td>
+<td style="text-align: center;"><a href="https://attilio-castano.github.io/Scripts/Functor%20of%20Points%20Geometry.pdf"> <img src="Adobe_PDF_file_icon_24x24.png" alt="PDF" /> </a></td>
+</tr>
+<tr id="abstract9" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em>
+In this mini course we will show how one can develop the basics of algebraic geometry by only considering categorical operations. There are two main ways in which this will be apparent: we will completely avoid making use of topological spaces, schemes will not be topological spaces with some extra data; and we will never define something by means of a explicit formula, for example we will characterize the category of stacks by a certain universal property and then we will compute an explicit description of it, which will yield the classical definition.
+
+In order to make this possible we will adopt Grothendieck functor of points perspective. The advantage of this formalism, while more abstract, it provides a unifying way in which one can do algebraic geometry in a variety of different situations. For example, if one replaces rings by derived rings one finds derived algebraic geometry. In fact, if one accepts the fact that only categorical operations are allowed, doing derived algebraic geometry does not add much difficulty.
+
+We will try to keep the hard requirements to the minimum, i.e., not much previous knowledge will be assumed, as we aim to develop the theory from the ground up. And it may be worth mentioning, that the main pedagogical goal of this mini course is to explain how to think categorically.</p>
+</td>
+</tr>
+</tbody>
+
+
+
+
+</table>
+<br>
+<p>
+We're still looking for speakers on topics including:
+<ol>
+<li>Perverse sheaves and the decomposition theorem</li>
+<li>Affine grassmannians</li>
+<li>A crash course on perfectoid spaces</li>
+<li>A brief intro to Atiyah&ndash;Singer index theory</li>
+</ol>
+and more!
+</p>
+<br>
+<p>The <a href="http://www-personal.umich.edu/~takumim/minicourses2016.html">2016</a>&nbsp;and&nbsp;<a href="http://www-personal.umich.edu/~takumim/minicourses2017.html">2017</a> schedules and abstracts are still available.&nbsp;</p>
+
+
+   <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#hideAbstracts").on("click", function(event) {
+          event.preventDefault();
+          $('.abstract').hide();
+          $("[id^=toggleAbstract]").text("Show");
+          $('#lastHeadRow').children().css("border-bottom","1pt solid black");
+        });
+        $("#showAbstracts").on("click", function(event) {
+          event.preventDefault();
+          $('.abstract').show();
+          $("[id^=toggleAbstract]").text("Hide");
+          $('#lastHeadRow').children().css("border-bottom","0");
+        });
+        $("[id^=toggleAbstract]").click(function() {
+          $('#abstract'+$(this).attr("id").slice(14)).toggle();
+          $('#abstract'+$(this).attr("id").slice(14)).is(":visible")?$(this).text("Hide"):$(this).text("Show");
+          if ($(this).attr("id").slice(14) == 19) {
+            $('#abstract'+$(this).attr("id").slice(14)).is(":visible")?$('#lastHeadRow').children().css("border-bottom","0"):$('#lastHeadRow').children().css("border-bottom","1pt solid black");
+          }
+        });
+      });
+    </script>
+
+

@@ -1,0 +1,552 @@
+<head>
+<title>Summer minicourses 2020</title>
+    <style type="text/css">
+      h2 {
+        margin-bottom: 0.5em;
+      }
+      p, ol, ul {
+        margin-top: 0;
+        margin-bottom: 0.5em;
+      }
+      tbody > tr > th {
+        text-align: left;
+      }
+      #abstractTable td:not(.speaker):not(.theAbstract) {
+        white-space: nowrap;
+      }
+      tr[id^="abstract"] {
+        display: none;
+      }
+      .lecturelist {
+        list-style-type: none;
+        counter-reset: elementcounter;
+        padding-left: 1em;
+      }
+      .lecturelist > li ul {
+        list-style: outside;
+        padding-left: 1em;
+        margin-bottom: 0em;
+      }
+      .lecturelist > li:before {
+        content: "Lecture " counter(elementcounter) ": ";
+        counter-increment: elementcounter;
+      }
+      .lecturelist > li > ul {
+        list-style-type: none;
+        padding-left: 2em;
+        text-indent: -0.75em;
+      }
+      .lecturelist > li > ul > li:before {
+        content: "– ";
+      }
+      .lecturelist > li > ul > li > ul {
+        list-style-type: disc;
+        text-indent: 0;
+      }
+      .lecturelist > li > ul > li > ul > li > ul {
+        list-style-type: circle;
+        text-indent: 0;
+      }
+      #abstractTable {
+        text-align: left;
+        width: 100%;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+      #abstractTable th,
+      #abstractTable > tbody > tr > td:not(.theAbstract):not(:last-child) {
+        padding: 4pt 2pt 4pt 2pt;
+      }
+      #abstractTable > tbody > tr > th {
+        padding-left: 4pt;
+      }
+      #headerRow > th {
+        border: solid black;
+        border-width: 1pt 1pt 1pt 1pt;
+        text-align: center;
+        padding-left: 4pt;
+        padding-right: 4pt;
+      }
+      #abstractTable > tbody:nth-child(even) {
+        background-color: #e2e2e2;
+      }
+      #abstractTable > tbody:nth-child(odd) {
+        background-color: #ffffff;
+      }
+      #abstractTable > tbody > tr > th:first-child {
+        border: solid black;
+        border-width: 0 0 0 1pt;
+      }
+      #abstractTable > tbody > tr > td:last-child:not(.theAbstract) {
+        border: solid black;
+        border-width: 0 1pt 0 0;
+        vertical-align: middle;
+        padding: 3pt 0 0 0;
+      }
+      #abstractTable > tbody:last-child > tr:last-child > th,
+      #abstractTable > tbody:last-child > tr:last-child > td:not(.theAbstract) {
+        border: solid black;
+        border-width: 0 0 1pt 0;
+      }
+      #abstractTable > tbody:last-child > tr:last-child > th:first-child {
+        border: solid black;
+        border-width: 0 0 1pt 1pt;
+      }
+      #abstractTable > tbody:last-child > tr:last-child > td:last-child:not(.theAbstract) {
+        border: solid black;
+        border-width: 0 1pt 1pt 0;
+      }
+      .theAbstract {
+        padding: 0 4pt 0 4pt;
+        border: solid black;
+        border-width: 0 1pt 0 1pt;
+      }
+      #abstractTable > tbody:last-child > tr:last-child > td[class="theAbstract"] {
+        border: solid black;
+        border-width: 0 1pt 1pt 1pt;
+      }
+      .corresTable {
+        width: 100%;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+      }
+      .corresTable tr td:first-child {
+        width: 49%;
+        text-align: right;
+      }
+      .corresTable tr td:nth-child(even) {
+        width: 2%;
+        white-space: nowrap;
+        text-align: center;
+      }
+      .corresTable tr td:last-child {
+        width: 49%;
+        text-align: left;
+      }
+      .lectureTable {
+        padding-left: 1em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+      }
+      .lectureTable tr td {
+        vertical-align: top;
+      }
+      #lastHeadRow th, #lastHeadRow td {
+        border-bottom: 1pt solid black;
+      }
+      #abstractTable > tbody:last-child > #lastHeadRow > th:first-child {
+        border: solid black;
+        border-width: 0 0 1pt 1pt;
+      }
+      #abstractTable > tbody:last-child > #lastHeadRow > td:last-child:not(.theAbstract) {
+        border: solid black;
+        border-width: 0 1pt 1pt 0;
+      }
+    </style>
+</head>
+
+
+
+
+
+<p><b>Summer [virtual] minicourses 2020</b></p>
+<p>The summer minicourses are a chance for Michigan graduate students to teach each other interesting math in a friendly, informal setting. 
+<p>Generally, courses meet once a day, in the afternoon, for a week. The Zoom meeting ID will be sent out to UM math graduate students; 
+<a href="mailto:malloryd@umich.edu">email me</a>
+ if you're not in this group but would like to participate! </p>
+<p>The line-up this year appears below, though additions and changes are likely. Note that all times are given in EST. You can <a id="showAbstracts" href="#">show</a> or <a id="hideAbstracts" href="#">hide</a> all the abstracts for printing purposes.</p>
+<p>If you're giving one of the minicourses and you'd like to post notes, just send them to me and I'll post them!</p>
+<br>
+<table id="abstractTable">
+<thead>
+<tr id="headerRow">
+<th id="topicHeader">Topic</th>
+<th>Speaker</th>
+<th colspan="2">Dates</th>
+<th colspan="1">Time</th>
+<th>Abstract</th>
+<th id="notesHeader">Notes</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<th>The local structure of singularities and the global structure of algebraic varieties</th>
+<td class="speaker">
+<a href="http://www-personal.umich.edu/~malloryd">Devlin Mallory</a>
+</td>
+<td>May 25 &ndash; May 29</td>
+<td>(M&ndash;F)</td>
+<td>1&ndash;2:30</td>
+<td style="text-align: center;"><button id="toggleAbstract1">Show</button></td>
+<td style="text-align: center;"><a href="main2020.pdf"> <img src="Adobe_PDF_file_icon_24x24.png" alt="PDF" /> </a></td>
+</tr>
+<tr id="abstract1" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em>
+This course will focus on connections between the global structure of algebraic varieties and the local structure of singularities, with a particular focus on the role of boundedness results. After reviewing the birational geometry of surfaces, we'll discuss the general philosophy of the minimal model program and the resulting classes of singularities one must consider. We'll then discuss some of the key questions about the behavior of these singularities, with an eye towards the application of "global" techniques of the minimal model program towards "local" questions on singularities, e.g., the proof of the ascending chain condition for log canonical thresholds. Time permitting, we may discuss the conjectural program of Chi Li, Chenyang Xu, and others to study arbitrary klt singularities via their degeneration to K-semistable Fano cone singularities.
+</p>
+</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<th>
+<a href="https://sites.google.com/umich.edu/mixedhodgetheoryminicrs2020/home">Deligne's mixed Hodge theory</a>
+</th>
+<td class="speaker">
+Brad Dirks and James Hotchkiss
+</td>
+<td>June 1 &ndash; June 5</td>
+<td>(M&ndash;F)</td>
+<td>1&ndash;2:30</td>
+<td style="text-align: center;"><button id="toggleAbstract2">Show</button></td>
+<td>  </td>
+</tr>
+<tr id="abstract2" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em>
+f X is a smooth complex projective variety, then each singular cohomology group of X (with complex coefficients) has a certain canonical direct-sum decomposition, called the Hodge decomposition. Moreover, the summands of the Hodge decomposition may be identified explicitly in terms of the differential forms on X.
+
+The goal of Deligne’s mixed Hodge theory is to generalize the Hodge decomposition to the case when X is an arbitrary scheme of finite type over the complex numbers. Deligne’s main result, developed in his series of papers Théorie de Hodge I–III, asserts that each cohomology group of any such X naturally carries a certain (possibly quite elaborate) structure, called a mixed Hodge structure, which recovers the Hodge decomposition when X is smooth and projective.
+
+The goal of this course is to explain the ideas and techniques of Deligne’s theory. Topics will include the basics of mixed Hodge structures, logarithmic differentials, simplicial schemes and cohomological descent. Some additional topics, such as limit mixed Hodge structures and cohomological invariants of singularities, may be discussed.
+
+Prerequisites: Sheaves, sheaf cohomology. Smooth morphisms, proper morphisms (otherwise, little algebraic geometry is needed). The basics of spectral sequences (degeneration, filtration on the limit terms, the Leray spectral sequence).  Basic formalism of derived functors and derived categories.
+</p>
+</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<th>Stratifying moduli spaces of curves using Weierstrass semigroups</th>
+<td class="speaker">
+<a href="http://www-personal.umich.edu/~hrichman">Harry Richman</a>
+</td>
+<td>June 8 &ndash; June 12</td>
+<td>(M T Th F)</td>
+<td>1&ndash;2</td>
+<td style="text-align: center;"><button id="toggleAbstract3">Show</button></td>
+<td>  </td>
+</tr>
+<tr id="abstract3" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em>
+In order to understand algebraic curves, it is often helpful to study their moduli spaces. Within the moduli space of all algebraic curves are subspaces of curves that are somehow more "special", e.g. hyperelliptic curves. The data of a numerical semigroup can be associated to a subspace of special pointed curves, which in some sense fall between all curves and hyperelliptic curves. I will survey some results on such spaces of pointed algebraic curves with prescribed Weierstrass semigroup, focusing on results of Pflueger, Bullock, and Eisenbud--Harris.
+</p>
+</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<th>Principal bundles</th>
+<td class="speaker">
+<a href="http://www-personal.umich.edu/~zykoskib">Bradley Zykoski</a>
+</td>
+<td>June 15 &ndash; June 19</td>
+<td>(M&ndash;F)</td>
+<td>1&ndash;2:30</td>
+<td style="text-align: center;"><button id="toggleAbstract4">Show</button></td>
+<td>  </td>
+</tr>
+<tr id="abstract4" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em>
+Fiber bundles are one of the most versatile constructions in all of mathematics. They capture the idea that when one assigns data to the points of a topological space, that data might be "twisted" by the topology of the space. By endowing a fiber bundle with a connection, we also have a local notion of how this data "bends" from one point to another. The structure of general fiber bundles is contained in their related principal bundles, and hence our focus is on these.
+<br/>
+<br/>
+
+The schedule of our discussion of the general theory is as follows:
+<ul>
+<li>
+Day 1: Introduction to principal bundles
+</li>
+<li>
+Day 2: Connections
+</li>
+<li>
+Day 3: Curvature
+</li>
+<li>
+Day 4: Chern classes
+</li>
+<li>
+Day 5: Vector bundles
+</li>
+</ul>
+
+The schedule of our discussion of specific applications is as follows:
+<ul>
+<li>
+Day 1: An intrinsic proof that every manifold admits a Riemannian metric
+</li>
+<li>
+ Day 3: The generalization from Maxwell's equations to the Yang-Mills equations
+</li>
+<li>
+Day 4: A volume computation for families of manifolds in symplectic geometry
+</li>
+<li>
+Day 5: A discussion of the Hodge bundle over the moduli space of curves
+</li>
+</ul>
+
+The only prerequisite is a strong background in differential topology. Familiarity with any other subject of the form "X Y" for X in {algebraic, differential} and Y in {topology, geometry} is useful, but not necessary.
+
+</p>
+</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<th>Real Lie groups/symmetric spaces</th>
+<td class="speaker">
+Kannappan Sampath
+</td>
+<td>June 22 &ndash; June 26</td>
+<td>(M&ndash;F)</td>
+<td>9&ndash;11</td>
+<td style="text-align: center;"><button id="toggleAbstract5">Show</button></td>
+<td>  </td>
+</tr>
+<tr id="abstract5" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em>
+Riemannian symmetric spaces are Riemannian manifolds whose curvature tensor is invariant under parallel transport. This class contains mundane examples like the model spaces of Riemannian geometry---the Euclidean space R^n (modeling zero curvature), the n-sphere S^n (modeling constant positive curvature) and H^n (modeling constant negative curvature)---and more involved examples like Grassmannians. Elie Cartan's classification of these spaces using group theory is perhaps one of the most beautiful areas of mathematics illustrating the interplay between geometry and group theory. The aim of our course is very modest --- to explain the definition of symmetric spaces and make plausible why their classification is equivalent to classification of real semisimple Lie groups.
+<br/>
+<br/>
+
+We will assume familiarity with elementary differential geometry (eg. manifolds, vector bundles, vector fields, differential forms). Prior exposure to Riemannian geometry would be beneficial but we will start with a crash course. 
+<br/>
+<br/>
+
+Here is a schedule (extremely tentative): 
+<ul>
+<li>
+Day 1: Intro Riemannian geometry (main examples: homogeneous Riemannian manifolds, i.e., those of the form G/H for a Lie group G and a closed subgroup H). 
+</li>
+<li>
+
+Day 2: Riemannian Symmetric spaces, Riemannian Symmetric pairs, and Orthogonal symmetric Lie algebras 
+</li>
+<li>
+
+Day 3: Examples of Riemannian Symmetric spaces
+</li>
+<li>
+
+Day 4: Statements from structure theory - 1 (de Rham decomposition, and duality?)
+</li>
+<li>
+
+Day 5: Statements from structure theory - 2 (Real semisimple Lie groups; symmetric spaces of non-compact type)
+</li>
+</ul>
+
+Reference. S. Helgason's "Differential Geometry, Lie groups and Symmetric spaces" is the canonical reference. We must reiterate that our goal is much more modest than what this reference achieves. 
+</p>
+</td>
+</tr>
+</tbody>
+
+
+<tbody>
+<tr>
+<th>Étale cohomology</th>
+<td class="speaker">
+James Hotchkiss
+</td>
+<td>July 6 &ndash; July 10</td>
+<td>(M&ndash;F)</td>
+<td>1&ndash;2:30</td>
+<td style="text-align: center;"><button id="toggleAbstract7">Show</button></td>
+<td>  </td>
+</tr>
+<tr id="abstract7" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em>
+While it is satisfactory for calculating the cohomology of coherent sheaves, the Zariski topology on an algebraic variety or scheme is too coarse for the purposes of algebraic topology. Instead, there is an étale site attached to any scheme X, which is a certain enrichment of the category of Zariski-open subsets of X, and there is a suitable theory of sheaves and sheaf cohomology on the étale site. The goal of the course is to develop the basics of étale sites, étale sheaves and étale cohomology.
+
+Prerequisites: Sheaves and sheaf cohomology on a topological space; schemes, finite/proper/smooth morphisms.
+</p>
+</td>
+</tr>
+</tbody>
+
+
+<tbody>
+<tr>
+<th>Local cohomology</th>
+<td class="speaker">
+Swaraj Sridhar Pande
+</td>
+<td>July 20 &ndash; July 24</td>
+<td>(M&ndash;F)</td>
+<td>1&ndash;2:30</td>
+<td style="text-align: center;"><button id="toggleAbstract9">Show</button></td>
+<td>  </td>
+</tr>
+<tr id="abstract9" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em>
+ Local cohomology is an algebraic analogue of local (co)homology from Topology. While in Topology local cohomology is used to test if a space is locally euclidean near a point, algebraically it arises as obstruction to extending sections of a sheaf. Originally defined by Grothendieck in 1961, the theory has found many applications in Algebraic Geometry and Commutative Algebra.
+The goal of this minicourse is to give an overview of the basic theory of local cohomology. After motivating the theory and understanding definitions, we'll discuss about injective modules and Koszul complexes which we'll use to compute some local cohomology modules. Then we'll see some applications to Geometry and Connectedness results like the Fulton-Hansen theorem. Time permitting, we'll talk about Gorenstein rings, Matlis duality and local duality.
+<br/>
+<br/> 
+
+Pre-requisites: Basic Commutative Algebra (Math 614), some familiarity with regular sequences, depth, Ext and Tor.
+</p>
+</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<th>Intersection theory</th>
+<td class="speaker">
+Nancy Wang
+</td>
+<td>July 27 &ndash; July 31</td>
+<td>(M&ndash;F)</td>
+<td>1&ndash;2:30</td>
+<td style="text-align: center;"><button id="toggleAbstract10">Show</button></td>
+<td style="text-align: center;"><a href="IntersectionTheory.pdf"> <img src="Adobe_PDF_file_icon_24x24.png" alt="PDF" /> </a></td>
+</tr>
+<tr id="abstract10" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em>
+This minicourse is an introduction to intersection theory. We will attempt to motivate intersection theory whenever we can- to the best of our limited knowledge and understanding-  and discuss intersection products as in Fulton's Intersection Theory. This will be about half of the time. In the remaining half, we'll discuss some enumerative applications of intersection theory.
+<br/> 
+<br/> 
+
+Familiarity with Weil and Cartier divisors will be assumed. Familiarity with intersection numbers in general (i.e intersecting by Cartier divisors on proper varieties) or with intersection numbers for curves on a smooth projective surface (as in Hartshorne Ch 5) will be useful for motivation, but not required. 
+</p>
+</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<th>Representation theory of finite-dimensional algebras</th>
+<td class="speaker">
+<a href="http://www-personal.umich.edu/~willdana">Will Dana</a>
+</td>
+<td>August 3 &ndash; August 7</td>
+<td>(M&ndash;F)</td>
+<td>2&ndash;3</td>
+<td style="text-align: center;"><button id="toggleAbstract11">Show</button></td>
+<td>  </td>
+</tr>
+<tr id="abstract11" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em>
+Finiteness is generally a very helpful property, and we should expect that the study of finite-dimensional algebras over a field and their finitely-generated modules is no exception. This particular discipline of representation theory is broadly relevant, subsuming the representation theory of finite groups (through group algebras) as well as the problem of classifying possible behaviors of diagrams of linear maps (through path algebras of quivers). However, in this level of generality, the nice property of semisimplicity fails: a representation may not be a direct sum of simple ones. Then a key question is: what degree of control over the ramifications of the failure of semisimplicity do we get from the aforementioned finiteness?
+<br/> 
+<br/> 
+In the 70s, Auslander and Reiten uncovered a great deal of subtle structure inherent in the representation theory of finite-dimensional algebras. In this course, we'll look at the underpinnings of this structure, using the Auslander-Reiten transform (which allows us to construct new indecomposable representations from old ones) and almost split sequences (which are like split exact sequences, except just barely not). We'll conclude by discussing the first Brauer-Thrall (no-longer-a-)conjecture, which states an important dichotomy: either there are finitely many indecomposable representations, or there are indecomposable representations of arbitrarily large dimension.
+</p>
+</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<th>
+Introduction to stable homotopy theory</th>
+<td class="speaker">
+<a href="https://sites.google.com/umich.edu/jackcarlisle/home">Jack Carlisle</a>
+</td>
+<td>August 10 &ndash; August 14</td>
+<td>(M&ndash;F)</td>
+<td>11&ndash;12</td>
+<td style="text-align: center;"><button id="toggleAbstract12">Show</button></td>
+<td>  </td>
+</tr>
+<tr id="abstract12" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em>
+Stable homotopy theory is the study of generalized (co)homology theories, such as singular (co)homology, K theory, and cobordism. Generalized cohomology theories are represented by objects called spectra, which simultaneously resemble topological spaces and (chain complexes of) abelian groups. We will develop the theory of spectra from the ground up, focusing on examples and calculations. After covering the basics, we will cover a variety of topics in stable homotopy theory such as
+<ul>
+<li>
+- Complex orientations and formal group laws
+</li>
+<li>
+- Operads and Infinite loop space theory
+</li>
+<li>
+- Equivariant stable homotopy theory
+</li>
+</ul>
+
+I will modify the topics covered according to the interests of the attendees.
+<br/> 
+<br/> 
+Prerequisites: The fundamental group and singular (co)homology. Experience with homological algebra will be useful, but not necessary.
+</p>
+</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<th>Harmonic analysis on p-adic reductive groups</th>
+<td class="speaker">
+<a href="http://www-personal.umich.edu/~yiwchen">Yiwang Chen</a>
+</td>
+<td>August 17 &ndash; August 21</td>
+<td>(M&ndash;F)</td>
+<td></td>
+<td style="text-align: center;"><button id="toggleAbstract13">Show</button></td>
+<td>  </td>
+</tr>
+<tr id="abstract13" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em>
+</p>
+</td>
+</tr>
+</tbody>
+
+
+</table>
+<br>
+
+<p>The 
+<a href="http://www-personal.umich.edu/~malloryd/minicourses2019.html">2019</a>,
+<a href="http://www-personal.umich.edu/~malloryd/minicourses2018.html">2018</a>,
+<a href="http://www-personal.umich.edu/~takumim/minicourses2017.html">2017</a>,
+and
+<a href="http://www-personal.umich.edu/~takumim/minicourses2016.html">2016</a>
+schedules and abstracts are still available.</p>
+
+
+   <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#hideAbstracts").on("click", function(event) {
+          event.preventDefault();
+          $('.abstract').hide();
+          $("[id^=toggleAbstract]").text("Show");
+          $('#lastHeadRow').children().css("border-bottom","1pt solid black");
+        });
+        $("#showAbstracts").on("click", function(event) {
+          event.preventDefault();
+          $('.abstract').show();
+          $("[id^=toggleAbstract]").text("Hide");
+          $('#lastHeadRow').children().css("border-bottom","0");
+        });
+        $("[id^=toggleAbstract]").click(function() {
+          $('#abstract'+$(this).attr("id").slice(14)).toggle();
+          $('#abstract'+$(this).attr("id").slice(14)).is(":visible")?$(this).text("Hide"):$(this).text("Show");
+          if ($(this).attr("id").slice(14) == 19) {
+            $('#abstract'+$(this).attr("id").slice(14)).is(":visible")?$('#lastHeadRow').children().css("border-bottom","0"):$('#lastHeadRow').children().css("border-bottom","1pt solid black");
+          }
+        });
+      });
+    </script>
+
+

@@ -1,0 +1,490 @@
+<head>
+<title>Summer minicourses 2021</title>
+    <style type="text/css">
+      h2 {
+        margin-bottom: 0.5em;
+      }
+      p, ol, ul {
+        margin-top: 0;
+        margin-bottom: 0.5em;
+      }
+      tbody > tr > th {
+        text-align: left;
+      }
+      #abstractTable td:not(.speaker):not(.theAbstract) {
+        white-space: nowrap;
+      }
+      tr[id^="abstract"] {
+        display: none;
+      }
+      .lecturelist {
+        list-style-type: none;
+        counter-reset: elementcounter;
+        padding-left: 1em;
+      }
+      .lecturelist > li ul {
+        list-style: outside;
+        padding-left: 1em;
+        margin-bottom: 0em;
+      }
+      .lecturelist > li:before {
+        content: "Lecture " counter(elementcounter) ": ";
+        counter-increment: elementcounter;
+      }
+      .lecturelist > li > ul {
+        list-style-type: none;
+        padding-left: 2em;
+        text-indent: -0.75em;
+      }
+      .lecturelist > li > ul > li:before {
+        content: "– ";
+      }
+      .lecturelist > li > ul > li > ul {
+        list-style-type: disc;
+        text-indent: 0;
+      }
+      .lecturelist > li > ul > li > ul > li > ul {
+        list-style-type: circle;
+        text-indent: 0;
+      }
+      #abstractTable {
+        text-align: left;
+        width: 100%;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+      #abstractTable th,
+      #abstractTable > tbody > tr > td:not(.theAbstract):not(:last-child) {
+        padding: 4pt 2pt 4pt 2pt;
+      }
+      #abstractTable > tbody > tr > th {
+        padding-left: 4pt;
+      }
+      #headerRow > th {
+        border: solid black;
+        border-width: 1pt 1pt 1pt 1pt;
+        text-align: center;
+        padding-left: 4pt;
+        padding-right: 4pt;
+      }
+      #abstractTable > tbody:nth-child(even) {
+        background-color: #e2e2e2;
+      }
+      #abstractTable > tbody:nth-child(odd) {
+        background-color: #ffffff;
+      }
+      #abstractTable > tbody > tr > th:first-child {
+        border: solid black;
+        border-width: 0 0 0 1pt;
+      }
+      #abstractTable > tbody > tr > td:last-child:not(.theAbstract) {
+        border: solid black;
+        border-width: 0 1pt 0 0;
+        vertical-align: middle;
+        padding: 3pt 0 0 0;
+      }
+      #abstractTable > tbody:last-child > tr:last-child > th,
+      #abstractTable > tbody:last-child > tr:last-child > td:not(.theAbstract) {
+        border: solid black;
+        border-width: 0 0 1pt 0;
+      }
+      #abstractTable > tbody:last-child > tr:last-child > th:first-child {
+        border: solid black;
+        border-width: 0 0 1pt 1pt;
+      }
+      #abstractTable > tbody:last-child > tr:last-child > td:last-child:not(.theAbstract) {
+        border: solid black;
+        border-width: 0 1pt 1pt 0;
+      }
+      .theAbstract {
+        padding: 0 4pt 0 4pt;
+        border: solid black;
+        border-width: 0 1pt 0 1pt;
+      }
+      #abstractTable > tbody:last-child > tr:last-child > td[class="theAbstract"] {
+        border: solid black;
+        border-width: 0 1pt 1pt 1pt;
+      }
+      .corresTable {
+        width: 100%;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+      }
+      .corresTable tr td:first-child {
+        width: 49%;
+        text-align: right;
+      }
+      .corresTable tr td:nth-child(even) {
+        width: 2%;
+        white-space: nowrap;
+        text-align: center;
+      }
+      .corresTable tr td:last-child {
+        width: 49%;
+        text-align: left;
+      }
+      .lectureTable {
+        padding-left: 1em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+      }
+      .lectureTable tr td {
+        vertical-align: top;
+      }
+      #lastHeadRow th, #lastHeadRow td {
+        border-bottom: 1pt solid black;
+      }
+      #abstractTable > tbody:last-child > #lastHeadRow > th:first-child {
+        border: solid black;
+        border-width: 0 0 1pt 1pt;
+      }
+      #abstractTable > tbody:last-child > #lastHeadRow > td:last-child:not(.theAbstract) {
+        border: solid black;
+        border-width: 0 1pt 1pt 0;
+      }
+    </style>
+</head>
+
+
+
+
+
+<p><b>Summer [virtual] minicourses 2021</b></p>
+<p>The summer minicourses are a chance for Michigan graduate students to teach each other interesting math in a friendly, informal setting. 
+<p>Generally, courses meet once a day, in the afternoon, for a week. The Zoom meeting ID will be sent out to UM math graduate students; 
+<a href="mailto:malloryd@umich.edu">email me</a>
+ if you're not in this group but would like to participate! </p>
+<p>The line-up this year appears below, though additions and changes are likely. Note that all times are given in EST. You can <a id="showAbstracts" href="#">show</a> or <a id="hideAbstracts" href="#">hide</a> all the abstracts for printing purposes.</p>
+<p>If you're giving one of the minicourses and you'd like to post notes, just send them to me and I'll post them!</p>
+<br>
+<table id="abstractTable">
+<thead>
+<tr id="headerRow">
+<th id="topicHeader">Topic</th>
+<th>Speaker</th>
+<th colspan="2">Dates</th>
+<th colspan="1">Time</th>
+<th>Abstract</th>
+<th id="notesHeader">Notes</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<th>
+Representations of quivers and Lie algebras
+</th>
+<td class="speaker">
+<a href="http://www-personal.umich.edu/~willdana">Will Dana</a>
+</td>
+<td>May 31 &ndash; June 4</td>
+<td>(M&ndash;F)</td>
+<td>10&ndash;11</td>
+<td style="text-align: center;"><button id="toggleAbstract3">Show</button></td>
+<td style="text-align: center;"><a href="http://www-personal.umich.edu/~willdana/RingelHallSlides.html"> <img src="Adobe_PDF_file_icon_24x24.png" alt="PDF" /> </a></td>
+<td>  </td>
+</tr>
+<tr id="abstract3" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em>
+The problem of classifying representations of a quiver essentially asks: what are the different ways a diagram of vector spaces and linear maps can behave, up to changes of basis? A theorem of Gabriel shows that this problem has its simplest answer when the underlying diagram is one of the Dynkin diagrams, in which case the indecomposable representations match up with positive roots of the associated root system. 
+</p>
+<p>
+Given the appearance of Dynkin diagrams and root systems, it's tempting to ask: is there a more direct connection between representations of a quiver and the associated Lie algebra itself? This opens up a deep area of study based on reconstructing Lie algebras and useful bases for them in terms of moduli spaces of quiver representations.
+</p>
+<p>
+In this course, we'll first lay out the context of quiver representations and Gabriel's theorem. Then, we'll scratch the surface of the deeper theory using the Ringel-Hall algebra, which recovers the universal enveloping algebra of the positive part of a semisimple Lie algebra. 
+</p>
+<p>
+I'll introduce most of the above concepts during the course, though prior exposure to Lie algebras will be helpful.
+</p>
+</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<th>
+Flavors of Schubert calculus
+</th>
+<td class="speaker">
+<a href="https://www-personal.umich.edu/~quangdao">Quang Dao</a>
+</td>
+<td>June 7 &ndash; June 11</td>
+<td>(M&ndash;F)</td>
+<td>10&ndash;11</td>
+<td style="text-align: center;"><button id="toggleAbstract2">Show</button></td>
+<td style="text-align: center;"><a href="https://www-personal.umich.edu/~quangdao/schubert-calculus-minicourse.html"> <img src="Adobe_PDF_file_icon_24x24.png" alt="PDF" /> </a></td>
+</tr>
+<tr id="abstract2" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em>
+Schubert calculus is the study of intersection theory on Grassmannians and other related objects. The subject was first introduced to answer questions in enumerative geometry, but has since found many connections to other areas of combinatorics and representation theory. In this minicourse, I will give an overview of Schubert calculus on the Grassmannian, solve some enumerative geometry problems, and make the connection to symmetric polynomials and Young tableaux. Time permitting, we will also discuss generalizations to other varieties such as the full flag variety, and other cohomology theories such as equivariant cohomology and K-theory
+</p>
+</td>
+</tr>
+</tbody>
+
+
+
+<tbody>
+<tr>
+<th>Enumerative Geometry and Gromov&ndash;Witten Theory</th>
+<td class="speaker">
+<a href="http://www-personal.umich.edu/~mmuelle/"> Michael Mueller</a>
+</td>
+<td>June 14 &ndash; June 18</td>
+<td>(M&ndash;F)</td>
+<td>10&ndash;11</td>
+<td style="text-align: center;"><button id="toggleAbstract4">Show</button></td>
+<td>  </td>
+</tr>
+<tr id="abstract4" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em>
+Enumerative geometry is the study of counting problems in geometry, such as: How many circles pass through 3 points in the plane? How many conics are tangent to five given conics? How many lines are there on a cubic surface? This minicourse will give an introduction to enumerative geometry, starting with the Chow ring and its applications to solving classical problems.
+</p>
+<p>
+The second part of this minicourse will introduce Gromov-Witten theory, a field with connections to enumerative geometry and physics; Gromov-Witten invariants of X are numbers roughly corresponding to the number of algebraic curves in X satisfying certain conditions. We’ll see how Gromov-Witten theory can be used to answer the question: how many rational curves of degree d pass through 3d-1 general points in P^2?
+</p>
+<p>
+My goal is to provide an accessible introduction to these topics, and I will try to introduce necessary concepts as we go along (though some exposure to algebraic geometry and/or (co)homology will be helpful).
+
+</p>
+</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<th>
+Vanishing theorems in algebraic geometry
+</th>
+<td class="speaker">
+Sridhar Venkatesh
+</td>
+<td>June 21 &ndash; June 25</td>
+<td>(M&ndash;F)</td>
+<td>5&ndash;6</td>
+<td style="text-align: center;"><button id="toggleAbstract5">Show</button></td>
+<td>  </td>
+</tr>
+<tr id="abstract5" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em>
+A vanishing theorem broadly refers to a theorem which gives conditions for coherent cohomology groups to vanish. Such theorems have tremendous applications to various branches of algebraic geometry, for instance in the Minimal Model Program.
+</p>
+<p>
+In this minicourse, I will present some of the fundamental vanishing theorems in char 0 algebraic geometry: Kodaira vanishing, Kawamata-Viehweg vanishing, and a few more. If time permits, I'll also talk about multiplier ideals and some of their applications.
+</p>
+<p>
+While basic knowledge of sheaf cohomology will be assumed, I'll introduce the necessary background from intersection theory in the first lecture.
+
+</p>
+</td>
+</tr>
+</tbody>
+
+
+<tbody>
+<tr>
+<th>
+Equivariant algebra
+</th>
+<td class="speaker">
+<a href="https://sites.google.com/umich.edu/jackcarlisle/home">Jack Carlisle</a>
+</td>
+<td>June 28 &ndash; July 2</td>
+<td>(M&ndash;F)</td>
+<td>11&ndash; 12</td>
+<td style="text-align: center;"><button id="toggleAbstract7">Show</button></td>
+<td>  </td>
+</tr>
+<tr id="abstract7" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em>
+In this course, we will investigate equivariant analogues of algebraic objects such as abelian groups, rings, modules and algebras. We will begin by discussing the algebra of Mackey functors, which are equivariant analogues of abelian groups. We will go on to discuss Green functors and (incomplete) Tambara functors, which are equivariant analogues of commutative rings. We will include many interesting examples, and emphasize the similarities and differences between ordinary algebra and equivariant algebra. There are minimal prerequisites for this course, so all are encouraged to participate!
+</p>
+</td>
+</tr>
+</tbody>
+
+
+
+<tbody>
+<tr>
+<th> Hochschild (co)homology </th>
+<td class="speaker"> Gleb Terentiuk </td>
+<td>July 5 &ndash; July 9</td>
+<td>(M&ndash;F)</td>
+<td>12&ndash;1</td>
+<td style="text-align: center;"><button id="toggleAbstract10">Show</button></td>
+<td></td>
+</tr>
+<tr id="abstract10" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em>
+Hochschild homology groups of an algebra A over a commutative ring k arise as the homology groups of the explicit complex HH(A/k), they were introduced already in 1950s. If the algebra A is commutative and smooth, then by the Hochschild-Kostant-Rosenberg theorem the n-th homology group is identified with the n-th Kähler forms module. It turns out that one can write down an explicit differential on HH(A/k) which coincides with the usual de Rham differential for smooth and commutative algebras.
+</p>
+<p>
+We will discuss why one can call this structure the circle action and we will derive the cyclic, negative cyclic, and periodic cyclic homology from this action. Also, we will discuss the topological version of the Hochschild homology and its relation to arithmetics. 
+</p>
+</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<th>Singularities of algebraic surfaces</th>
+<td class="speaker">
+<a href="http://www-personal.umich.edu/~malloryd/">Devlin Mallory</a>
+</td>
+<td>July 12 &ndash; July 16</td>
+<td>(M&ndash;F)</td>
+<td>1&ndash;2</td>
+<td style="text-align: center;"><button id="toggleAbstract9">Show</button></td>
+<td>  </td>
+</tr>
+<tr id="abstract9" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em>
+Even if one is interested only in smooth algebraic varieties, it soon becomes necessary to understand singularities. Singularities of algebraic surfaces provide a rich class of examples which has motivated much of the study of singularities in higher dimension. In this course, we will cover resolution of singularities for algebraic surfaces, classes of algebraic surface singularities (quotient, rational, Du Val, etc.), cohomological approaches to singularities via the study of various cycles on resolutions, and applications to commutative algebra via complete ideals and unique factorization. For much of the course the only prerequisite is a first course in algebraic geometry, but some familiarity with sheaf cohomology will be useful for the second half of the course. 
+</p>
+</td>
+</tr>
+</tbody>
+
+
+
+<tbody>
+<tr>
+<th>
+Tropical geometry
+</th>
+<td class="speaker">
+<a href="http://www-personal.umich.edu/~spcox/"> Shelby Cox</a>
+</td>
+<td>July 19 &ndash; July 23</td>
+<td>(M&ndash;F)</td>
+<td>11&ndash;12</td>
+<td style="text-align: center;"><button id="toggleAbstract11">Show</button></td>
+<td>  </td>
+</tr>
+<tr id="abstract11" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em>
+ropical geometry is the study of algebraic varieties over the min-plus semiring. Tropical geometry has deep connections to other areas of mathematics (including enumerative algebraic geometry, algebraic statistics, and dynamics), and has been rediscovered independently many times. Only recently have efforts been made to unify tropical results from different fields into a single theory of tropical geometry. 
+</p>
+<p>
+In this course I will introduce some of the fundamental results in tropical geometry with a focus on computing examples. Specifically, I plan to cover: tropical hypersurfaces, tropical linear spaces, tropical polytopes and some applications of tropical geometry. I am also happy to talk about other tropical geometry topics after the minicourse!
+</p>
+</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<th>
+Symplectic geometry (moment maps, Delzant polytopes, symplectic reduction)
+</th>
+<td class="speaker">
+Reebhu Bhattacharyya
+</td>
+<td>July 26 &ndash; July 31</td>
+<td>(M&ndash;F)</td>
+<td>12&ndash;1</td>
+<td style="text-align: center;"><button id="toggleAbstract12">Show</button></td>
+<td>  </td>
+</tr>
+<tr id="abstract12" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em>
+ Symplectic geometry has its roots in classical mechanics where it was mainly used to study the time evolution of planetary systems. We have come a long way since then, and with huge development in this area, symplectic geometry has become a central branch of differential geometry and topology. This mini-course will aim to introduce this subject with minimal prerequsites (basic knowledge of manifolds). After introducing the notion of a symplectic structure on manifolds, we will see why symplectic manifolds have no local invariants (Darboux Theorem) unlike Riemannian manifolds. Then, we will introduce Hamiltonian group actions on symplectic manifolds and the associated moment map which will naturally lead to the idea of Marsden-Weinstein reduction. If time permits, we will also try to introduce the Atiyah-Guillemin-Sternberg convexity theorem which characterizes the image of the moment map for torus actions and is linked to toric geometry.
+</p>
+</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<th>Geometric singular perturbation theory and applications to neuroscience</th>
+<td class="speaker">
+<a href="http://www-personal.umich.edu/~kailasas/">Sameer Kailasa</a>
+</td>
+<td>August 2 &ndash; August 6</td>
+<td>(M&ndash;F)</td>
+<td>1&ndash;2</td>
+<td style="text-align: center;"><button id="toggleAbstract13">Show</button></td>
+<td>  </td>
+</tr>
+<tr id="abstract13" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em>
+</p>
+</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<th>
+p-derivatives and arithmetic differential equations
+</th>
+<td class="speaker">
+José Esparza Lozano
+</td>
+<td>August 23 &ndash; August 27</td>
+<td>(M&ndash;F)</td>
+<td></td>
+<td style="text-align: center;"><button id="toggleAbstract14">Show</button></td>
+<td>  </td>
+</tr>
+<tr id="abstract14" class="abstract">
+<td class="theAbstract" colspan="8">
+<p><em>Abstract.</em>
+</p>
+</td>
+</tr>
+</tbody>
+
+
+
+</table>
+<br>
+
+<p>The 
+<a href="http://www-personal.umich.edu/~malloryd/minicourses2020.html">2020</a>,
+<a href="http://www-personal.umich.edu/~malloryd/minicourses2019.html">2019</a>,
+<a href="http://www-personal.umich.edu/~malloryd/minicourses2018.html">2018</a>,
+<a href="http://www-personal.umich.edu/~takumim/minicourses2017.html">2017</a>,
+and
+<a href="http://www-personal.umich.edu/~takumim/minicourses2016.html">2016</a>
+schedules and abstracts are still available.</p>
+
+
+   <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#hideAbstracts").on("click", function(event) {
+          event.preventDefault();
+          $('.abstract').hide();
+          $("[id^=toggleAbstract]").text("Show");
+          $('#lastHeadRow').children().css("border-bottom","1pt solid black");
+        });
+        $("#showAbstracts").on("click", function(event) {
+          event.preventDefault();
+          $('.abstract').show();
+          $("[id^=toggleAbstract]").text("Hide");
+          $('#lastHeadRow').children().css("border-bottom","0");
+        });
+        $("[id^=toggleAbstract]").click(function() {
+          $('#abstract'+$(this).attr("id").slice(14)).toggle();
+          $('#abstract'+$(this).attr("id").slice(14)).is(":visible")?$(this).text("Hide"):$(this).text("Show");
+          if ($(this).attr("id").slice(14) == 19) {
+            $('#abstract'+$(this).attr("id").slice(14)).is(":visible")?$('#lastHeadRow').children().css("border-bottom","0"):$('#lastHeadRow').children().css("border-bottom","1pt solid black");
+          }
+        });
+      });
+    </script>
+
+
